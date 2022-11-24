@@ -32,9 +32,6 @@ const cart = [
     },
 ]
 
-count.textContent = JSON.parse(localStorage.getItem('cards')).length
-
-
 const promise = new Promise((resolve, reject) => {
     let newData = cart.map(items => addToHtml(items))
     main.innerHTML = newData
@@ -98,3 +95,5 @@ function setItem (key, value) {
 function getItem (key) {
     return JSON.parse(localStorage.getItem(key))
 }
+
+count.textContent = JSON.parse(localStorage.getItem('cards')).length
